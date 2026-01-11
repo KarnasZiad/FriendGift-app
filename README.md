@@ -23,6 +23,18 @@ Fonctionnalités supplémentaires (bonus) :
 <details open>
   <summary><strong>Voir les captures</strong></summary>
 
+  <h3>Architecture globale</h3>
+  <p>
+    <a href="screenshots/diagram-export-11-01-2026-23_55_44.png">
+      <img
+        src="screenshots/diagram-export-11-01-2026-23_55_44.png"
+        alt="Architecture globale"
+        width="900"
+        style="max-width: 100%; height: auto;"
+      />
+    </a>
+  </p>
+
   <h3>Desktop</h3>
   <p>
     <a href="screenshots/Page%20d%27authentification.png">
