@@ -23,24 +23,31 @@ Fonctionnalités supplémentaires (bonus) :
 <details open>
   <summary><strong>Voir les captures</strong></summary>
 
-  <h3>Authentification</h3>
+  <h3>Desktop</h3>
   <p>
-    <img src="screenshots/Page%20d%27authentification.png" width="900" alt="Page d'authentification" />
+    <a href="screenshots/Page%20d%27authentification.png">
+      <img src="screenshots/Page%20d%27authentification.png" width="520" alt="Page d'authentification" />
+    </a>
+    <a href="screenshots/friends.png">
+      <img src="screenshots/friends.png" width="520" alt="Liste des amis" />
+    </a>
   </p>
-
-  <h3>Amis / Idées cadeaux</h3>
   <p>
-    <img src="screenshots/friends.png" width="440" alt="Liste des amis" />
-    <img src="screenshots/addgifts.png" width="440" alt="Ajout d'une idée cadeau" />
-  </p>
-  <p>
-    <img src="screenshots/addgifts%2Binspiration-view.png" width="900" alt="Ajout + suggestions d'inspiration" />
+    <a href="screenshots/addgifts.png">
+      <img src="screenshots/addgifts.png" width="520" alt="Ajout d'une idée cadeau" />
+    </a>
+    <a href="screenshots/addgifts%2Binspiration-view.png">
+      <img src="screenshots/addgifts%2Binspiration-view.png" width="520" alt="Ajout + suggestions d'inspiration" />
+    </a>
   </p>
 
   <h3>Mobile</h3>
   <p>
-    <img src="screenshots/mobile-view1.png" width="320" alt="Vue mobile" />
+    <a href="screenshots/mobile-view1.png">
+      <img src="screenshots/mobile-view1.png" width="270" alt="Vue mobile" />
+    </a>
   </p>
+  <p><em>Note : la capture mobile actuelle est en faible résolution (270px de large). Pour un rendu plus net et homogène, remplace-la par une capture mobile plus grande (ex: 720px+).</em></p>
 </details>
 
 ## Prérequis
