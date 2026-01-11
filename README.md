@@ -161,16 +161,6 @@ npm run build
 - `GET /api/friends/{friendId}/ideas`
 - `POST /api/friends/{friendId}/ideas`
 
-## Notes techniques / limites
-
-- Le backend utilise une base **H2** (Hibernate ORM **Panache**).
-  - En dev : base **fichier** (`backend/data/friendgift.mv.db`) → les données persistent au redémarrage.
-  - En test : base **en mémoire** → schéma recréé à chaque exécution.
-  - Réinitialiser les données en dev : arrêter le backend puis supprimer `backend/data/friendgift.mv.db`.
-- Authentification via **JWT (RSA)** : après connexion, l’utilisateur ne peut consulter que **ses propres** amis et idées.
-- Clés JWT : stockées localement dans `backend/keys/` (non commitées) → le repo ne contient aucun secret.
-- Mots de passe : stockés en clair (app démo) → à remplacer par un hash (BCrypt/Argon2) en production.
-- Le frontend en dev tourne sur `5173` et appelle l’API Quarkus sur `8080` (CORS autorisé en dev).
 
 ### Vérifier que la DB persiste (optionnel)
 
