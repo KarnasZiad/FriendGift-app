@@ -1,6 +1,7 @@
 package com.friendgift;
 
 import io.quarkus.test.junit.QuarkusTest;
+import io.quarkus.test.common.QuarkusTestResource;
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Test;
 
@@ -10,6 +11,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
 @QuarkusTest
+@QuarkusTestResource(JwtTestKeysResource.class)
 public class AuthAndFriendsTest {
 	private String loginToken() {
 		return given()

@@ -23,6 +23,10 @@ Thumbs.db
 *.h2.db
 /data/
 
+# JWT keys (never commit)
+*.pem
+backend/keys/
+
 # Local smoke-test logs
 backend-dev.log
 backend-dev.err.log
