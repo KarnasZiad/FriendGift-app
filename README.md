@@ -35,30 +35,49 @@ Fonctionnalités supplémentaires (bonus) :
     </a>
   </p>
 
-  <h3>Desktop</h3>
-  <p>
-    <a href="screenshots/Page%20d%27authentification.png">
-      <img src="screenshots/Page%20d%27authentification.png" width="520" alt="Page d'authentification" />
-    </a>
-    <a href="screenshots/friends.png">
-      <img src="screenshots/friends.png" width="520" alt="Liste des amis" />
-    </a>
-  </p>
-  <p>
-    <a href="screenshots/addgifts.png">
-      <img src="screenshots/addgifts.png" width="520" alt="Ajout d'une idée cadeau" />
-    </a>
-    <a href="screenshots/addgifts%2Binspiration-view.png">
-      <img src="screenshots/addgifts%2Binspiration-view.png" width="520" alt="Ajout + suggestions d'inspiration" />
-    </a>
-  </p>
+  <h3>Captures (Desktop)</h3>
+  <table>
+    <tr>
+      <td align="center" valign="top">
+        <strong>Page d'authentification</strong><br />
+        <a href="screenshots/Page%20d%27authentification.png">
+          <img src="screenshots/Page%20d%27authentification.png" width="460" alt="Page d'authentification" />
+        </a>
+      </td>
+      <td align="center" valign="top">
+        <strong>Liste des amis</strong><br />
+        <a href="screenshots/friends.png">
+          <img src="screenshots/friends.png" width="460" alt="Liste des amis" />
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" valign="top">
+        <strong>Ajout d'une idée cadeau</strong><br />
+        <a href="screenshots/addgifts.png">
+          <img src="screenshots/addgifts.png" width="460" alt="Ajout d'une idée cadeau" />
+        </a>
+      </td>
+      <td align="center" valign="top">
+        <strong>Ajout + inspirations</strong><br />
+        <a href="screenshots/addgifts%2Binspiration-view.png">
+          <img src="screenshots/addgifts%2Binspiration-view.png" width="460" alt="Ajout + suggestions d'inspiration" />
+        </a>
+      </td>
+    </tr>
+  </table>
 
-  <h3>Mobile</h3>
-  <p>
-    <a href="screenshots/mobile-view1.png">
-      <img src="screenshots/mobile-view1.png" width="270" alt="Vue mobile" />
-    </a>
-  </p>
+  <h3>Captures (Mobile)</h3>
+  <table>
+    <tr>
+      <td align="center" valign="top">
+        <strong>Vue mobile</strong><br />
+        <a href="screenshots/mobile-view1.png">
+          <img src="screenshots/mobile-view1.png" width="270" alt="Vue mobile" />
+        </a>
+      </td>
+    </tr>
+  </table>
   <p><em>Note : la capture mobile actuelle est en faible résolution (270px de large). Pour un rendu plus net et homogène, remplace-la par une capture mobile plus grande (ex: 720px+).</em></p>
 </details>
 
