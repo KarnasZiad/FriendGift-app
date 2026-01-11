@@ -2,6 +2,7 @@
 backend/target/
 backend/.quarkus/
 *.log
+*.class
 
 # Frontend
 frontend/node_modules/
@@ -16,8 +17,12 @@ frontend/dist/
 .DS_Store
 Thumbs.db
 
-# H2 local files (when we switch to file-based DB)
+# H2 local files
 *.mv.db
 *.trace.db
 *.h2.db
 /data/
+
+# Local smoke-test logs
+backend-dev.log
+backend-dev.err.log

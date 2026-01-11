@@ -92,11 +92,19 @@ npm run build
 
 ## Notes techniques / limites
 
-- Les données sont en **mémoire** (pas de base de données) : elles sont réinitialisées au redémarrage.
+- Le backend utilise une base **H2** (Hibernate ORM **Panache**).
+  - En dev : base **fichier** (`backend/data/friendgift.mv.db`) → les données persistent au redémarrage.
+  - En test : base **en mémoire** → schéma recréé à chaque exécution.
+  - Réinitialiser les données en dev : arrêter le backend puis supprimer `backend/data/friendgift.mv.db`.
 - Authentification via **JWT (RSA)** : après connexion, l’utilisateur ne peut consulter que **ses propres** amis et idées.
+- Mots de passe : stockés en clair (app démo) → à remplacer par un hash (BCrypt/Argon2) en production.
 - Le frontend en dev tourne sur `5173` et appelle l’API Quarkus sur `8080` (CORS autorisé en dev).
 
-## Dépannage (rapide)
+### Vérifier que la DB persiste (optionnel)
 
-- Si l’app affiche « Session expirée » : se reconnecter (token supprimé/expiré).
-- Si `npm run dev` reste “bloqué” : c’est normal, c’est un serveur de dev (utiliser `npm run build` pour valider la compilation).
+Un script automatisé démarre Quarkus, crée un ami, redémarre Quarkus et vérifie que l’ami est toujours présent :
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\tools\db-smoke-test.ps1
+```
+

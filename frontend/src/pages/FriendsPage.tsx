@@ -135,18 +135,18 @@ export default function FriendsPage() {
                 </label>
               </form>
 
-              {!sorted ? (
-                <div className="itemMeta">Chargement…</div>
-              ) : sorted.length === 0 ? (
-                <div className="empty">
-                  <div className="emptyTitle">Aucun ami pour le moment</div>
-                  <div className="emptyText">Connecte-toi avec un compte de démo pour voir des exemples.</div>
-                </div>
-              ) : (
-                <div className="list">
-                  {sorted.map((f) => (
-                    <div key={f.id} className="item">
-                      <div className="friendRow">
+              <div className="friendsList">
+                {!sorted ? (
+                  <div className="itemMeta">Chargement…</div>
+                ) : sorted.length === 0 ? (
+                  <div className="empty">
+                    <div className="emptyTitle">Aucun ami pour le moment</div>
+                    <div className="emptyText">Connecte-toi avec un compte de démo pour voir des exemples.</div>
+                  </div>
+                ) : (
+                  <div className="list">
+                    {sorted.map((f) => (
+                      <div key={f.id} className="item">
                         <div className="friendMain">
                           <div className="avatar" aria-hidden="true">
                             {initials(f.name)}
@@ -209,79 +209,77 @@ export default function FriendsPage() {
                         </div>
 
                         {editingId !== f.id ? (
-                          <div className="friendMenuWrap">
-                            <button
-                              className="kebabButton"
-                              type="button"
-                              aria-label={`Menu pour ${f.name}`}
-                              aria-haspopup="menu"
-                              aria-expanded={menuOpenId === f.id}
-                              disabled={saving}
-                              onClick={() => setMenuOpenId((cur) => (cur === f.id ? null : f.id))}
-                            >
-                              ⋮
-                            </button>
+                          <div className="itemActions">
+                            <Link className="button buttonSmall" to={`/friends/${encodeURIComponent(f.id)}`}>
+                              Ouvrir
+                            </Link>
 
-                            {menuOpenId === f.id ? (
-                              <div className="dropdownMenu" role="menu" aria-label={`Actions pour ${f.name}`}>
-                                <button
-                                  className="dropdownItem"
-                                  type="button"
-                                  role="menuitem"
-                                  disabled={saving}
-                                  onClick={() => {
-                                    setMenuOpenId(null);
-                                    setEditingId(f.id);
-                                    setEditingName(f.name);
-                                  }}
-                                >
-                                  Modifier
-                                </button>
+                            <div className="friendMenuWrap">
+                              <button
+                                className="kebabButton"
+                                type="button"
+                                aria-label={`Menu pour ${f.name}`}
+                                aria-haspopup="menu"
+                                aria-expanded={menuOpenId === f.id}
+                                disabled={saving}
+                                onClick={() => setMenuOpenId((cur) => (cur === f.id ? null : f.id))}
+                              >
+                                ⋮
+                              </button>
 
-                                <button
-                                  className="dropdownItem dropdownDanger"
-                                  type="button"
-                                  role="menuitem"
-                                  disabled={saving}
-                                  onClick={async () => {
-                                    setMenuOpenId(null);
-                                    const ok = window.confirm(`Supprimer ${f.name} ?`);
-                                    if (!ok) return;
+                              {menuOpenId === f.id ? (
+                                <div className="dropdownMenu" role="menu" aria-label={`Actions pour ${f.name}`}>
+                                  <button
+                                    className="dropdownItem"
+                                    type="button"
+                                    role="menuitem"
+                                    disabled={saving}
+                                    onClick={() => {
+                                      setMenuOpenId(null);
+                                      setEditingId(f.id);
+                                      setEditingName(f.name);
+                                    }}
+                                  >
+                                    Modifier
+                                  </button>
 
-                                    setSaving(true);
-                                    setError(null);
-                                    try {
-                                      await deleteFriend(f.id);
-                                      await refresh();
-                                    } catch {
-                                      setError("Impossible de supprimer cet ami.");
-                                    } finally {
-                                      setSaving(false);
-                                    }
-                                  }}
-                                >
-                                  Supprimer
-                                </button>
-                              </div>
-                            ) : null}
+                                  <button
+                                    className="dropdownItem dropdownDanger"
+                                    type="button"
+                                    role="menuitem"
+                                    disabled={saving}
+                                    onClick={async () => {
+                                      setMenuOpenId(null);
+                                      const ok = window.confirm(`Supprimer ${f.name} ?`);
+                                      if (!ok) return;
+
+                                      setSaving(true);
+                                      setError(null);
+                                      try {
+                                        await deleteFriend(f.id);
+                                        await refresh();
+                                      } catch {
+                                        setError("Impossible de supprimer cet ami.");
+                                      } finally {
+                                        setSaving(false);
+                                      }
+                                    }}
+                                  >
+                                    Supprimer
+                                  </button>
+                                </div>
+                              ) : null}
+                            </div>
                           </div>
                         ) : (
                           <span className="badge">Édition</span>
                         )}
                       </div>
-
-                      {editingId !== f.id ? (
-                        <div className="itemActions">
-                          <Link className="button buttonSmall" to={`/friends/${encodeURIComponent(f.id)}`}>
-                            Ouvrir
-                          </Link>
-                        </div>
-                      ) : null}
-                    </div>
-                  ))}
-                </div>
-              )}
-          </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
         </section>
       </div>
     </div>
