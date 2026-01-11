@@ -18,6 +18,31 @@ Fonctionnalités supplémentaires (bonus) :
 - UI/UX améliorée (menu ⋮, suggestions d’inspiration, responsive).
 - Tests backend (Quarkus + RestAssured).
 
+## Captures d’écran
+
+<details open>
+  <summary><strong>Voir les captures</strong></summary>
+
+  <h3>Authentification</h3>
+  <p>
+    <img src="screenshots/Page%20d%27authentification.png" width="900" alt="Page d'authentification" />
+  </p>
+
+  <h3>Amis / Idées cadeaux</h3>
+  <p>
+    <img src="screenshots/friends.png" width="440" alt="Liste des amis" />
+    <img src="screenshots/addgifts.png" width="440" alt="Ajout d'une idée cadeau" />
+  </p>
+  <p>
+    <img src="screenshots/addgifts%2Binspiration-view.png" width="900" alt="Ajout + suggestions d'inspiration" />
+  </p>
+
+  <h3>Mobile</h3>
+  <p>
+    <img src="screenshots/mobile-view1.png" width="320" alt="Vue mobile" />
+  </p>
+</details>
+
 ## Prérequis
 
 - Java 17+
