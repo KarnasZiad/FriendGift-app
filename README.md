@@ -78,7 +78,7 @@ Fonctionnalités supplémentaires (bonus) :
       </td>
     </tr>
   </table>
-  <p><em>Note : la capture mobile actuelle est en faible résolution (270px de large). Pour un rendu plus net et homogène, remplace-la par une capture mobile plus grande (ex: 720px+).</em></p>
+  
 </details>
 
 ## Prérequis
